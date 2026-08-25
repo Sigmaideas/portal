@@ -5,14 +5,29 @@
 
 **배포 주소 — https://sigmaideas.github.io/portal/**
 
-## 연결된 대시보드
+## 대시보드 구성
 
-| 대시보드 | 주소 | 내용 |
+회사 → 기능 순으로 묶여 있습니다. 아직 대시보드가 없는 자리는 점선 카드(`card-empty`)로 표시하고 링크를 걸지 않습니다.
+
+### 엑스와이지 (XYZ, Inc.)
+
+| 기능 | 대시보드 | 주소 |
 | --- | --- | --- |
-| IP 통합 관리 | [xyz-ip-dashboard](https://sigmaideas.github.io/xyz-ip-dashboard/) | 특허·상표·디자인·저작권 보유 현황과 기술평가 |
-| 브랜드 · 리뷰 모니터링 | [loungex-brand-dashboard](https://sigmaideas.github.io/loungex-brand-dashboard/) | 라운지엑스 매장 리뷰 수집, 감성 분포, 월간 활성도 |
-| P&L 손익 관리 | [loungex-pnl-dashboard](https://sigmaideas.github.io/loungex-pnl-dashboard/) | 라운지엑스24h 지점별 매출·투자·회수 및 회사 손익 |
-| 로봇 판매 현황 | [robot-sales-dashboard](https://sigmaideas.github.io/robot-sales-dashboard/) | 월별 로봇 판매량 시각화와 모델별 실적 비교 |
+| 기술 | IP 통합 관리 | [xyz-ip-dashboard](https://sigmaideas.github.io/xyz-ip-dashboard/) |
+| 인사 | — | 준비 중 |
+| 사업 | 로봇 판매 현황 | [robot-sales-dashboard](https://sigmaideas.github.io/robot-sales-dashboard/) |
+| 브랜드 | — | 준비 중 |
+
+### 라운지엑스 (LOUNGE'X)
+
+| 기능 | 대시보드 | 주소 |
+| --- | --- | --- |
+| 사업 | P&L 손익 관리 | [loungex-pnl-dashboard](https://sigmaideas.github.io/loungex-pnl-dashboard/) |
+| 브랜드 | 리뷰 모니터링 | [loungex-brand-dashboard](https://sigmaideas.github.io/loungex-brand-dashboard/) |
+
+준비 중인 자리에 대시보드가 생기면 `index.html` 의 해당 `<div class="card card-empty">` 를
+`<a class="card" href="...">` 로 바꾸고 `card-go` 화살표만 다시 넣으면 됩니다.
+아이콘 색은 `card-empty` 를 떼는 순간 원래 색으로 돌아옵니다.
 
 ## 구성
 

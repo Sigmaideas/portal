@@ -159,13 +159,33 @@ body {
 }
 
 /* ===== Board ===== */
-.section-title {
-  margin: 4px 0 14px;
-  font-size: 11px;
+.board {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.group-head {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 0 0 14px;
+}
+.group-head h2 {
+  margin: 0;
+  font-size: 16px;
   font-weight: 700;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
+  letter-spacing: -0.015em;
+}
+.group-en {
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
   color: var(--text-dim);
+}
+.group-rule {
+  flex: 1;
+  height: 1px;
+  background: var(--border-strong);
 }
 .grid {
   display: grid;
@@ -202,10 +222,11 @@ body {
   place-items: center;
 }
 .card-icon svg { width: 22px; height: 22px; }
-.icon-ip    { background: var(--accent-soft); color: var(--accent); }
-.icon-brand { background: #fff4e6; color: var(--warn); }
-.icon-pnl   { background: #ebfbee; color: var(--positive); }
-.icon-robot { background: #f3f0ff; color: #7048e8; }
+.icon-tech   { background: var(--accent-soft); color: var(--accent); }
+.icon-biz    { background: #ebfbee; color: var(--positive); }
+.icon-brandl { background: #fff4e6; color: var(--warn); }
+.icon-brandx { background: #f3f0ff; color: #7048e8; }
+.icon-hr     { background: var(--surface-2); color: var(--text-dim); }
 
 .card-body { flex: 1; min-width: 0; }
 .card-body h3 {
@@ -218,12 +239,27 @@ body {
   gap: 8px;
   flex-wrap: wrap;
 }
-.card-en {
-  font-size: 10px;
+.card-sub {
+  font-size: 11px;
   font-weight: 500;
   color: var(--text-dim);
   letter-spacing: 0;
 }
+
+/* 아직 대시보드가 없는 자리 — 클릭 대상이 아니므로 <div> 로 두고 톤을 낮춘다. */
+.card-empty {
+  background: transparent;
+  border-style: dashed;
+  border-color: var(--border-strong);
+  box-shadow: none;
+  cursor: default;
+}
+.card-empty:hover { transform: none; box-shadow: none; border-color: var(--border-strong); }
+/* 자리 카드는 아이콘 색도 함께 죽인다. 나중에 card-empty 만 떼면 원래 색이 돌아온다. */
+.card-empty .card-icon { background: var(--surface-2); color: var(--text-dim); }
+.card-empty h3 { color: var(--text-dim); }
+.card-empty .card-sub { color: var(--text-dim); }
+.card-empty p { color: var(--text-dim); }
 .card-body p {
   margin: 5px 0 0;
   font-size: 12px;
@@ -258,4 +294,5 @@ body {
   .quote-card { padding: 24px 22px; }
   .quote-card blockquote p { font-size: 16px; }
   .quote-mark { font-size: 64px; right: 14px; }
+  .board { gap: 24px; }
 }
