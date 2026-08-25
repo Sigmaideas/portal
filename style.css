@@ -1,0 +1,254 @@
+:root {
+  color-scheme: light;
+  --bg: #f8f8fb;
+  --surface: #ffffff;
+  --surface-2: #f4f5f8;
+  --border: #ececf1;
+  --border-strong: #e0e1e8;
+  --text: #1f2329;
+  --text-sub: #495057;
+  --text-dim: #9a9fa8;
+  --accent: #4263eb;
+  --accent-soft: #edf0fe;
+  --positive: #2f9e44;
+  --warn: #f08c00;
+  --radius: 16px;
+  --radius-sm: 10px;
+  --shadow: 0 1px 2px rgba(31, 35, 41, 0.04), 0 8px 24px rgba(31, 35, 41, 0.05);
+  --shadow-hover: 0 2px 4px rgba(31, 35, 41, 0.05), 0 16px 40px rgba(66, 99, 235, 0.12);
+}
+
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
+
+body {
+  font-family: 'Pretendard Variable', 'Pretendard', -apple-system, BlinkMacSystemFont,
+               'Apple SD Gothic Neo', 'Noto Sans KR', sans-serif;
+  background:
+    radial-gradient(1100px 520px at 12% -8%, #eef1fe 0%, rgba(238, 241, 254, 0) 60%),
+    radial-gradient(900px 460px at 92% 0%, #fdf3e8 0%, rgba(253, 243, 232, 0) 55%),
+    var(--bg);
+  background-attachment: fixed;
+  color: var(--text);
+  font-size: 13px;
+  line-height: 1.5;
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+}
+
+.shell {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 56px 28px 64px;
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.dot { color: var(--text-dim); margin: 0 6px; }
+
+/* ===== Hero ===== */
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+.eyebrow {
+  margin: 0 0 10px;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  color: var(--text-dim);
+}
+.hero h1 {
+  margin: 0;
+  font-size: 30px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+.date-line {
+  margin: 8px 0 0;
+  font-size: 13px;
+  color: var(--text-sub);
+  display: flex;
+  align-items: center;
+}
+.clock {
+  font-variant-numeric: tabular-nums;
+  font-feature-settings: 'tnum';
+  letter-spacing: 0.01em;
+}
+
+/* ===== Weather ===== */
+.weather {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 16px 22px;
+  box-shadow: var(--shadow);
+  min-width: 260px;
+}
+.weather-icon { font-size: 34px; line-height: 1; }
+.weather-temp {
+  font-size: 26px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+  font-variant-numeric: tabular-nums;
+}
+.weather-temp .deg { font-weight: 500; color: var(--text-dim); }
+.weather-desc { font-size: 12px; color: var(--text-sub); margin-top: 2px; }
+.weather-meta { font-size: 11px; color: var(--text-dim); margin-top: 4px; display: flex; align-items: center; }
+.weather-meta .dot { margin: 0 5px; }
+
+/* ===== Quote ===== */
+.quote-card {
+  position: relative;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 30px 34px 28px;
+  box-shadow: var(--shadow);
+  overflow: hidden;
+}
+.quote-card::before {
+  content: '';
+  position: absolute;
+  left: 0; top: 0; bottom: 0;
+  width: 3px;
+  background: linear-gradient(180deg, var(--accent), #7c8ff5);
+}
+.quote-mark {
+  position: absolute;
+  right: 26px;
+  top: 6px;
+  font-size: 90px;
+  line-height: 1;
+  color: var(--accent-soft);
+  font-family: Georgia, 'Times New Roman', serif;
+  user-select: none;
+  pointer-events: none;
+}
+.quote-card blockquote { margin: 0; position: relative; z-index: 1; }
+.quote-card blockquote p {
+  margin: 0;
+  font-size: 19px;
+  font-weight: 600;
+  line-height: 1.62;
+  letter-spacing: -0.015em;
+  word-break: keep-all;
+  max-width: 78ch;
+}
+.quote-card cite {
+  display: block;
+  margin-top: 12px;
+  font-style: normal;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--accent);
+}
+
+/* ===== Board ===== */
+.section-title {
+  margin: 4px 0 14px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text-dim);
+}
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(420px, 1fr));
+  gap: 14px;
+}
+.card {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 20px 22px;
+  text-decoration: none;
+  color: inherit;
+  box-shadow: var(--shadow);
+  transition: transform .16s ease, box-shadow .16s ease, border-color .16s ease;
+}
+.card:hover {
+  transform: translateY(-2px);
+  border-color: var(--border-strong);
+  box-shadow: var(--shadow-hover);
+}
+.card:hover .card-go { color: var(--accent); transform: translateX(3px); }
+.card:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+
+.card-icon {
+  flex-shrink: 0;
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  display: grid;
+  place-items: center;
+}
+.card-icon svg { width: 22px; height: 22px; }
+.icon-ip    { background: var(--accent-soft); color: var(--accent); }
+.icon-brand { background: #fff4e6; color: var(--warn); }
+.icon-pnl   { background: #ebfbee; color: var(--positive); }
+.icon-robot { background: #f3f0ff; color: #7048e8; }
+
+.card-body { flex: 1; min-width: 0; }
+.card-body h3 {
+  margin: 0;
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.card-en {
+  font-size: 10px;
+  font-weight: 500;
+  color: var(--text-dim);
+  letter-spacing: 0;
+}
+.card-body p {
+  margin: 5px 0 0;
+  font-size: 12px;
+  color: var(--text-sub);
+  word-break: keep-all;
+}
+.card-go {
+  flex-shrink: 0;
+  font-size: 17px;
+  color: var(--text-dim);
+  transition: transform .16s ease, color .16s ease;
+}
+
+/* ===== Footer ===== */
+.foot {
+  margin-top: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
+  color: var(--text-dim);
+}
+.foot a { color: var(--text-dim); text-decoration: none; }
+.foot a:hover { color: var(--accent); }
+
+@media (max-width: 640px) {
+  .shell { padding: 36px 18px 48px; gap: 22px; }
+  .hero h1 { font-size: 24px; }
+  .weather { width: 100%; }
+  .quote-card { padding: 24px 22px; }
+  .quote-card blockquote p { font-size: 16px; }
+  .quote-mark { font-size: 64px; right: 14px; }
+}

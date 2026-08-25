@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>SIGMA IDEAS · 경영 포탈</title>
+<meta name="description" content="엑스와이지 / 라운지엑스 경영 대시보드 통합 포탈" />
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📊</text></svg>" />
+<link rel="preconnect" href="https://cdn.jsdelivr.net" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard-dynamic-subset.css" />
+<link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+<main class="shell">
+
+  <!-- ===== Header : 인사 + 날짜/시간 + 날씨 ===== -->
+  <header class="hero">
+    <div class="hero-left">
+      <p class="eyebrow">SIGMA IDEAS · MANAGEMENT PORTAL</p>
+      <h1 id="greeting">좋은 아침입니다</h1>
+      <p class="date-line">
+        <span id="today">—</span>
+        <span class="dot">·</span>
+        <span id="clock" class="clock">--:--:--</span>
+      </p>
+    </div>
+
+    <div class="weather" id="weather">
+      <div class="weather-icon" id="wxIcon">⏳</div>
+      <div class="weather-body">
+        <div class="weather-temp"><span id="wxTemp">--</span><span class="deg">°</span></div>
+        <div class="weather-desc" id="wxDesc">날씨 불러오는 중…</div>
+        <div class="weather-meta">
+          <span id="wxPlace">—</span>
+          <span class="dot">·</span>
+          <span id="wxRange">최고 -- / 최저 --</span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ===== 오늘의 경영 명언 ===== -->
+  <section class="quote-card">
+    <div class="quote-mark">“</div>
+    <blockquote>
+      <p id="quoteText">—</p>
+      <footer><cite id="quoteAuthor">—</cite></footer>
+    </blockquote>
+  </section>
+
+  <!-- ===== 대시보드 ===== -->
+  <section class="board">
+    <h2 class="section-title">경영 대시보드</h2>
+    <div class="grid">
+
+      <a class="card" href="https://sigmaideas.github.io/xyz-ip-dashboard/" target="_blank" rel="noopener">
+        <div class="card-icon icon-ip">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 4v5c0 4.5-3 7.6-7 9-4-1.4-7-4.5-7-9V7l7-4z"/><path d="M9.5 12l1.8 1.8 3.4-3.6"/></svg>
+        </div>
+        <div class="card-body">
+          <h3>IP 통합 관리<span class="card-en">ip-dashboard</span></h3>
+          <p>특허·상표·디자인·저작권 보유 현황과 기술평가</p>
+        </div>
+        <span class="card-go" aria-hidden="true">→</span>
+      </a>
+
+      <a class="card" href="https://sigmaideas.github.io/loungex-brand-dashboard/" target="_blank" rel="noopener">
+        <div class="card-icon icon-brand">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.4 8.4 0 01-9 8.4L4 21l1.2-3.6A8.4 8.4 0 1121 11.5z"/><path d="M8.5 11.5h.01M12 11.5h.01M15.5 11.5h.01"/></svg>
+        </div>
+        <div class="card-body">
+          <h3>브랜드 · 리뷰 모니터링<span class="card-en">loungex-brand-dashboard</span></h3>
+          <p>라운지엑스 매장 리뷰 수집, 감성 분포와 월간 활성도</p>
+        </div>
+        <span class="card-go" aria-hidden="true">→</span>
+      </a>
+
+      <a class="card" href="https://sigmaideas.github.io/loungex-pnl-dashboard/" target="_blank" rel="noopener">
+        <div class="card-icon icon-pnl">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19h16"/><path d="M6.5 15.5v-4M11 15.5V7M15.5 15.5v-6M20 15.5v-9"/></svg>
+        </div>
+        <div class="card-body">
+          <h3>P&amp;L 손익 관리<span class="card-en">loungex-pnl-dashboard</span></h3>
+          <p>라운지엑스24h 지점별 매출·투자·회수 및 회사 손익</p>
+        </div>
+        <span class="card-go" aria-hidden="true">→</span>
+      </a>
+
+      <a class="card" href="https://sigmaideas.github.io/robot-sales-dashboard/" target="_blank" rel="noopener">
+        <div class="card-icon icon-robot">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="8" width="16" height="11" rx="3"/><path d="M12 8V4.5"/><circle cx="12" cy="3.5" r="1.2"/><path d="M9 13h.01M15 13h.01"/><path d="M9.5 16.2h5"/></svg>
+        </div>
+        <div class="card-body">
+          <h3>로봇 판매 현황<span class="card-en">robot-sales-dashboard</span></h3>
+          <p>월별 로봇 판매량 시각화와 모델별 실적 비교</p>
+        </div>
+        <span class="card-go" aria-hidden="true">→</span>
+      </a>
+
+    </div>
+  </section>
+
+  <footer class="foot">
+    <span>SIGMA IDEAS</span>
+    <span class="dot">·</span>
+    <span>내부 경영도구 포탈</span>
+    <span class="dot">·</span>
+    <a href="https://github.com/Sigmaideas" target="_blank" rel="noopener">github.com/Sigmaideas</a>
+  </footer>
+
+</main>
+<script src="./quotes.js"></script>
+<script src="./script.js"></script>
+</body>
+</html>
