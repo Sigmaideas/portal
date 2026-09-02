@@ -55,12 +55,11 @@ body {
   gap: 24px;
   flex-wrap: wrap;
 }
-.eyebrow {
-  margin: 0 0 10px;
-  font-size: 10px;
-  font-weight: 700;
-  letter-spacing: 0.14em;
-  color: var(--text-dim);
+.brand-logo {
+  display: block;
+  width: auto;
+  height: 22px;
+  margin: 0 0 12px;
 }
 .hero h1 {
   margin: 0;
